@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プロジェクトメンバー採用</title>  <!-- ================== STYLE ================== -->  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b, #020617 65%);
+      color: #e5e7eb;
+    }
+
+    header {
+      padding: 90px 20px 70px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 14px;
+      letter-spacing: 0.08em;
+    }
+
+    header p {
+      color: #c7d2fe;
+      font-size: 1.05rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 100px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 28px;
+      padding-left: 14px;
+      border-left: 4px solid #6366f1;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #020617, #020617cc);
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.55);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 55px rgba(0,0,0,0.7);
+    }
+
+    .role-title {
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      color: #a5b4fc;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    li { margin-bottom: 6px; }
+
+    .center {
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .apply-btn {
+      background: linear-gradient(135deg, #6366f1, #4338ca);
+      border: none;
+      color: white;
+      font-size: 1.15rem;
+      padding: 18px 44px;
+      border-radius: 999px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      box-shadow: 0 15px 35px rgba(67,56,202,0.6);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .apply-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 20px 45px rgba(67,56,202,0.8);
+    }
+
+    /* ================== MODAL ================== */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(2,6,23,0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .modal.active { display: flex; }
+
+    .form-box {
+      width: 100%;
+      max-width: 560px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 22px;
+      padding: 34px 36px 40px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.75);
+    }
+
+    .form-box h3 {
+      margin: 0 0 26px;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .close {
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.3rem;
+      float: right;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #c7d2fe;
+      font-size: 0.95rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .send-btn {
+      width: 100%;
+      margin-top: 10px;
+      padding: 14px;
+      font-size: 1.05rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #022c22;
+      box-shadow: 0 10px 30px rgba(34,197,94,0.5);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
+    }
+  </style></head>
+<body>  <!-- ================== HEADER ================== -->  <header>
+    <h1>PROJECT MEMBER RECRUITMENT</h1>
+    <p>建築・編集・音響・プログラマー・シナリオ</p>
+  </header>  <!-- ================== MAIN ================== -->  <main>
+    <section>
+      <h2>募集職種</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="role-title">建築</div>
+          <ul>
+            <li>マインクラフトBE所持（必須）</li>
+            <li>Microsoftアカウント所持（必須）</li>
+          </ul>
+        </div><div class="card">
+      <div class="role-title">撮影</div>
+      <ul>
+        <li>マインクラフトBE所持（必須）</li>
+        <li>Microsoftアカウント所持（必須）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="role-title">演者</div>
+      <ul>
+        <li>マインクラフトBE所持（必須）</li>
+        <li>Microsoftアカウント所持（必須）</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="role-title">編集</div>
+      <ul><li>編集ソフトを使用可能（必須）</li></ul>
+    </div>
+
+    <div class="card">
+      <div class="role-title">音響</div>
+      <ul><li>音響ソフト使用可、または収録環境あり（必須）</li></ul>
+    </div>
+
+    <div class="card">
+      <div class="role-title">プログラマー</div>
+      <ul><li>HTML / JavaScript 等が書ける（必須）</li></ul>
+    </div>
+
+    <div class="card">
+      <div class="role-title">シナリオ</div>
+      <ul><li>必須条件なし</li></ul>
+    </div>
+  </div>
+</section>
+
+<div class="center">
+  <button class="apply-btn" onclick="openForm()">応募する</button>
+</div>
+
+  </main>  <!-- ================== FORM MODAL ================== -->  <div class="modal" id="modal">
+    <div class="form-box">
+      <button class="close" onclick="closeForm()">×</button>
+      <h3>応募フォーム</h3><label>希望職種</label>
+  <select id="role">
+    <option>建築</option>
+    <option>撮影</option>
+    <option>演者</option>
+    <option>編集</option>
+    <option>音響</option>
+    <option>プログラマー</option>
+    <option>シナリオ</option>
+  </select>
+
+  <label>経験</label>
+  <textarea id="experience" placeholder="これまでの経験を書いてください"></textarea>
+
+  <label>実績（写真・動画・音声のURL）</label>
+  <input id="works" placeholder="Google Drive / YouTube / X / SoundCloud などのURL" />
+
+  <label>補足（内容説明）</label>
+  <textarea id="detail" placeholder="実績の内容や役割を簡単に説明"></textarea>
+
+  <label>連絡先（Discord ID 等）</label>
+  <input id="contact" />
+
+  <button class="send-btn" onclick="sendForm()">送信</button>
+</div>
+
+  </div>  <footer>© Project Recruitment</footer>  <!-- ================== SCRIPT ================== -->  <script>
+    const WEBHOOK_URL = "ここにDiscordのWebhook URL";
+
+    function openForm() {
+      document.getElementById('modal').classList.add('active');
+    }
+
+    function closeForm() {
+      document.getElementById('modal').classList.remove('active');
+    }
+
+    function sendForm() {
+      const role = document.getElementById('role').value;
+      const experience = document.getElementById('experience').value || "未記入";
+      const works = document.getElementById('works').value || "未記入";
+      const detail = document.getElementById('detail').value || "未記入";
+      const contact = document.getElementById('contact').value || "未記入";
+
+      const payload = {
+        username: "応募フォーム",
+        embeds: [
+          {
+            title: "新しい応募",
+            color: 5793266,
+            fields: [
+              { name: "職種", value: role },
+              { name: "経験", value: experience },
+              { name: "実績（URL）", value: works },
+              { name: "補足", value: detail },
+              { name: "連絡先", value: contact }
+            ],
+            timestamp: new Date().toISOString()
+          }
+        ]
+      };
+
+      fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+      .then(() => {
+        alert("応募を送信しました");
+        closeForm();
+      })
+      .catch(() => alert("送信に失敗しました"));
+    }
+  </script></body>
+</html>
