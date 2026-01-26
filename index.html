@@ -3,262 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STUDIO Eve 公式サイト</title>
+<title>WENFS 公式サイト</title>
+
 <style>
-/* ==== 全体 ==== */
-body {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+body{
   margin:0;
-  color:#e5e7eb;
-  background: linear-gradient(270deg,#0a0f1b,#1e293b,#0a0f1b);
-  background-size: 600% 600%;
-  animation: gradientBG 20s ease infinite;
-}
-
-/* 背景アニメーション */
-@keyframes gradientBG {
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* ==== ヘッダー ==== */
-header {
-  text-align:center;
-  padding:60px 20px;
-  background:rgba(2,6,23,0.8);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-}
-header h1 { font-size:3rem; margin-bottom:10px; color:#6366f1;}
-header p { font-size:1.2rem; color:#c7d2fe;}
-
-/* ==== ナビ ==== */
-nav { text-align:center; margin:20px 0; }
-nav button {
-  background:linear-gradient(135deg,#3b82f6,#6366f1);
-  border:none;
-  color:#fff;
-  font-weight:bold;
-  font-size:1rem;
-  margin:0 10px;
-  cursor:pointer;
-  padding:12px 24px;
-  border-radius:12px;
-  transition:0.3s;
-  box-shadow:0 5px 15px rgba(0,0,0,0.4);
-}
-nav button.active, nav button:hover {
-  background:linear-gradient(135deg,#6366f1,#3b82f6);
-  transform:translateY(-3px) scale(1.05);
-  box-shadow:0 8px 25px rgba(0,0,0,0.7);
-}
-
-/* ==== メイン ==== */
-main { max-width:1000px; margin:0 auto; padding:40px 20px;}
-section { display:none; opacity:0; transform:translateY(20px); transition: all 0.5s ease; }
-section.active { display:block; opacity:1; transform:translateY(0); }
-
-/* ==== カード ==== */
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:28px; margin-top:20px;}
-.card {
-  background:linear-gradient(180deg,#020617,#020617cc);
-  border:1px solid #6366f1;
-  border-radius:18px;
-  padding:24px;
-  box-shadow:0 10px 20px rgba(67,56,202,0.4);
-  transition:0.3s, box-shadow 0.5s;
-}
-.card:hover {
-  transform:translateY(-8px) scale(1.03);
-  box-shadow:0 25px 50px rgba(99,102,241,0.7);
-}
-.role-title { font-size:1.3rem; margin-bottom:12px; color:#a5b4fc; }
-
-/* ==== 応募ボタン ==== */
-.apply-btn {
-  background:linear-gradient(135deg,#6366f1,#3b82f6);
-  border:none; color:white;
-  font-size:1.15rem; padding:18px 44px; border-radius:999px;
-  cursor:pointer; letter-spacing:0.05em;
-  box-shadow:0 15px 35px rgba(67,56,202,0.6);
-  transition:0.3s;
-}
-.apply-btn:hover {
-  transform:scale(1.06) rotate(-1deg);
-  box-shadow:0 20px 50px rgba(67,56,202,0.8);
-}
-
-/* ==== モーダル ==== */
-.modal { position:fixed; inset:0; background:rgba(2,6,23,0.95); display:none; align-items:center; justify-content:center; z-index:100; }
-.modal.active { display:flex; }
-.form-box {
-  width:100%; max-width:560px;
   background:#020617;
-  border:1px solid #6366f1;
-  border-radius:22px;
-  padding:34px 36px 40px;
-  box-shadow:0 30px 60px rgba(67,56,202,0.75);
+  color:#e5e7eb;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:2.2;
 }
-.close { background:none; border:none; color:#94a3b8; font-size:1.3rem; float:right; cursor:pointer;}
-input, textarea, select {
-  width:100%; margin-bottom:18px;
-  padding:12px 14px; border-radius:10px; border:1px solid #6366f1;
-  background:#020617; color:#e5e7eb;
-}
-textarea { resize:vertical; min-height:110px; }
-.send-btn {
-  width:100%; padding:14px; font-size:1.05rem; border-radius:999px; border:none; cursor:pointer;
-  background:linear-gradient(135deg,#22c55e,#16a34a);
-  color:#022c22; box-shadow:0 10px 30px rgba(34,197,94,0.5);
-  transition:0.3s;
-}
-.send-btn:hover { transform:scale(1.03); box-shadow:0 15px 40px rgba(34,197,94,0.8); }
 
-/* ==== フッター ==== */
-footer { text-align:center; padding:30px; border-top:1px solid #6366f1; color:#94a3b8; margin-top:40px; }
+/* ===== ヘッダー ===== */
+header{
+  padding:72px 20px 56px;
+  text-align:center;
+  border-bottom:1px solid #1e293b;
+}
+header h1{
+  margin:0 0 14px;
+  font-size:2.8rem;
+  color:#818cf8;
+}
+header p{
+  margin:0;
+  font-size:1.05rem;
+  color:#c7d2fe;
+}
+
+/* ===== ナビ ===== */
+nav{
+  margin-top:36px;
+}
+nav button{
+  margin:6px;
+  padding:12px 24px;
+  font-size:.95rem;
+  border-radius:999px;
+  border:1px solid #334155;
+  background:#020617;
+  color:#e5e7eb;
+  cursor:pointer;
+}
+nav button.active,
+nav button:hover{
+  background:#1e293b;
+}
+
+/* ===== メイン ===== */
+main{
+  max-width:760px;
+  margin:auto;
+  padding:72px 20px;
+}
+section{display:none}
+section.active{display:block}
+
+h2{
+  font-size:1.6rem;
+  margin-bottom:28px;
+  color:#a5b4fc;
+}
+p{
+  margin:0 0 22px;
+}
+ul{
+  padding-left:22px;
+}
+li{
+  margin-bottom:12px;
+}
+
+/* ===== カード ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:32px;
+  margin-top:36px;
+}
+.card{
+  padding:24px;
+  border-radius:16px;
+  border:1px solid #1e293b;
+  background:#020617;
+}
+.role{
+  font-size:1.1rem;
+  margin-bottom:12px;
+  color:#c7d2fe;
+}
+
+/* ===== 応募 ===== */
+.center{
+  text-align:center;
+  margin-top:56px;
+}
+.apply{
+  padding:18px 44px;
+  font-size:1rem;
+  border-radius:999px;
+  border:none;
+  background:#6366f1;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* ===== フッター ===== */
+footer{
+  text-align:center;
+  padding:32px;
+  font-size:.85rem;
+  color:#94a3b8;
+  border-top:1px solid #1e293b;
+}
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1>STUDIO Eve</h1>
-  <p>Minecraft映画制作プロジェクト公式サイト</p>
+  <h1>WENFS</h1>
+  <p>Minecraft映画制作プロジェクト</p>
+
   <nav>
-    <button class="tab-btn active" data-tab="home">ホーム</button>
-    <button class="tab-btn" data-tab="rules">ルール</button>
-    <button class="tab-btn" data-tab="recruit">募集</button>
-    <button class="tab-btn" data-tab="minecraft">マイクラ企画</button>
-    <button class="tab-btn" data-tab="discord">Discord案内</button>
-    <button class="tab-btn" data-tab="staff">幹部紹介</button>
+    <button class="tab active" data-id="home">概要</button>
+    <button class="tab" data-id="rules">ルール</button>
+    <button class="tab" data-id="recruit">募集</button>
+    <button class="tab" data-id="discord">Discord</button>
+    <button class="tab" data-id="staff">運営</button>
   </nav>
 </header>
 
 <main>
-  <!-- ホーム -->
-  <section id="home" class="active">
-    <h2>ホーム</h2>
-    <p>STUDIO EveではMinecraft内で映画制作を行っています。各ページから活動内容やルール、募集情報をご確認ください。</p>
-  </section>
 
-  <!-- サーバールール -->
-  <section id="rules">
-    <h2>サーバールール</h2>
-    <ul>
-      <li>即抜け行為は禁止（参加後5分以内に管理者連絡なし）</li>
-      <li>他人への誹謗中傷は禁止</li>
-      <li>サーバーおよび他サーバーでの荒らし行為禁止</li>
-      <li>他サーバーでのルール違反禁止</li>
-      <li>許可なしの宣伝行為禁止（プロフィールリンク誘導も含む）</li>
-      <li>深夜帯(23:30~6:00)のeveryone/hereメンションは禁止</li>
-      <li>サーバー・募集ページに必要のない負荷をかける行為禁止</li>
-      <li>管理者が不適切と判断した行為は禁止</li>
-    </ul>
-  </section>
+<section id="home" class="active">
+  <h2>プロジェクト概要</h2>
+  <p>
+    WENFSは、Minecraft統合版を使用し、  
+    <strong>1時間規模の映画作品</strong>を制作するプロジェクトです。
+  </p>
+  <p>
+    建築・撮影・脚本・編集など、  
+    それぞれの得意分野を持ち寄り、一本の作品を完成させます。
+  </p>
+  <p>
+    経験の有無は問いません。  
+    制作に興味がある方を広く募集しています。
+  </p>
+</section>
 
-  <!-- 募集 -->
-  <section id="recruit">
-    <h2>募集職種</h2>
-    <div class="grid">
-      <div class="card"><div class="role-title">建築</div><ul><li>マインクラフトBE所持（必須）</li><li>Microsoftアカウント所持（必須）</li></ul></div>
-      <div class="card"><div class="role-title">撮影</div><ul><li>マインクラフトBE所持（必須）</li><li>Microsoftアカウント所持（必須）</li></ul></div>
-      <div class="card"><div class="role-title">演者</div><ul><li>マインクラフトBE所持（必須）</li><li>Microsoftアカウント所持（必須）</li></ul></div>
-      <div class="card"><div class="role-title">編集</div><ul><li>編集ソフト使用可（必須）</li></ul></div>
-      <div class="card"><div class="role-title">音響</div><ul><li>音響ソフト使用可、または収録環境あり（必須）</li></ul></div>
-      <div class="card"><div class="role-title">プログラマー</div><ul><li>HTML / JS等が書ける（必須）</li></ul></div>
-      <div class="card"><div class="role-title">シナリオ</div><ul><li>必須条件なし</li></ul></div>
+<section id="rules">
+  <h2>サーバールール</h2>
+  <ul>
+    <li>参加5分以内の無言退出は禁止</li>
+    <li>誹謗中傷・暴言行為は禁止</li>
+    <li>荒らし・スパム行為は禁止</li>
+    <li>無許可での宣伝行為は禁止</li>
+    <li>深夜帯（23:30〜6:00）のeveryone/hereは禁止</li>
+    <li>過度な負荷・妨害行為は禁止</li>
+    <li>運営が不適切と判断した行為</li>
+  </ul>
+</section>
+
+<section id="recruit">
+  <h2>募集職種</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="role">建築</div>
+      <ul><li>統合版Minecraft所持</li></ul>
     </div>
-    <div class="center" style="text-align:center;margin-top:30px;">
-      <button class="apply-btn" onclick="openForm()">応募する</button>
+
+    <div class="card">
+      <div class="role">撮影</div>
+      <ul><li>PC必須</li><li>統合版所持</li></ul>
     </div>
-  </section>
 
-  <!-- マイクラ企画 -->
-  <section id="minecraft">
-    <h2>マイクラ企画</h2>
-    <p>現在準備中です。</p>
-  </section>
+    <div class="card">
+      <div class="role">演者（声）</div>
+      <ul><li>Discord通話参加可能</li></ul>
+    </div>
 
-  <!-- Discord案内 -->
-  <section id="discord">
-    <h2>Discord案内</h2>
-    <p>
-      統合版マイクラを使って、映画(1時間程度)を一本、<strong>本気で作る</strong>企画をやっています！<br><br>
-      ストーリー・建築・撮影・編集、どれか一つでも興味があれば歓迎です！<br>
-      演技や建築が得意じゃなくても大丈夫！<br>
-      シナリオ提案だけでも大丈夫！他の人の提案に追加案を出したり共同制作もOK！<br>
-      無理な強制参加はありません。幹部ロールによる管理も徹底済みです。<br><br>
-      世界観・シナリオも自由に発案可能！<br>
-      気になったらまずは覗くだけでもどうぞ〜 いつでもWelcomeです！<br><br>
-      <a href="https://discord.gg/Y4tEDKYTN" target="_blank" style="color:#6366f1;">Discordサーバーはこちら</a>
-    </p>
-  </section>
+    <div class="card">
+      <div class="role">編集</div>
+      <ul><li>動画編集ソフト使用可能</li></ul>
+    </div>
 
-  <!-- 幹部紹介 -->
-  <section id="staff">
-    <h2>幹部・責任者紹介</h2>
-    <ul>
-      <li>総括 : 和布助</li>
-      <li>監督・広報 : !Eve</li>
-      <li>人事・プログラミング責任者 : ふにゃくん.exe 128TB</li>
-      <li>シナリオ責任者 : SasS124、猫吸い中毒末期患者No.114514</li>
-      <li>雑用 : シロ、SasS124</li>
-    </ul>
-  </section>
+    <div class="card">
+      <div class="role">音響</div>
+      <ul><li>音声編集・収録環境あり</li></ul>
+    </div>
+
+    <div class="card">
+      <div class="role">プログラマー</div>
+      <ul><li>アドオン / コマンド / 管理</li></ul>
+    </div>
+
+    <div class="card">
+      <div class="role">脚本</div>
+      <ul><li>経験不問</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="discord">
+  <h2>Discord案内</h2>
+  <p>
+    Minecraft統合版を使用し、  
+    映画制作を目的とした共同制作サーバーです。
+  </p>
+  <p>
+    ストーリー提案のみ、  
+    一部工程のみの参加も可能です。
+  </p>
+  <p>
+    興味があれば、まずは見学からでも問題ありません。
+  </p>
+  <p>
+    <a href="https://discord.gg/Y4tEDKYTN" target="_blank" style="color:#818cf8;">
+      Discordサーバーへ参加
+    </a>
+  </p>
+</section>
+
+<section id="staff">
+  <h2>運営メンバー</h2>
+  <ul>
+    <li>総括：和布助</li>
+    <li>監督・広報：!Eve</li>
+    <li>技術責任者：ふにゃくん.exe</li>
+    <li>脚本責任者：SasS124、猫吸い中毒末期患者No.114514</li>
+    <li>補佐：シロ</li>
+  </ul>
+</section>
+
 </main>
 
-<!-- 応募フォームモーダル -->
-<div class="modal" id="modal">
-  <div class="form-box">
-    <button class="close" onclick="closeForm()">×</button>
-    <h3>応募フォーム</h3>
-    <label>希望職種</label>
-    <select id="role">
-      <option>建築</option><option>撮影</option><option>演者</option><option>編集</option>
-      <option>音響</option><option>プログラマー</option><option>シナリオ</option>
-    </select>
-    <label>経験</label><textarea id="experience" placeholder="これまでの経験を書いてください"></textarea>
-    <label>実績（URL）</label><input id="works" placeholder="Google Drive / YouTube / X / SoundCloud などのURL" />
-    <label>補足</label><textarea id="detail" placeholder="実績の内容や役割を簡単に説明"></textarea>
-    <label>連絡先（Discord ID等）</label><input id="contact" />
-    <button class="send-btn" onclick="sendForm()">送信</button>
-  </div>
-</div>
-
-<footer>© STUDIO Eve</footer>
+<footer>© WENFS</footer>
 
 <script>
-/* ===== タブ切替 ===== */
-const tabs=document.querySelectorAll('.tab-btn');
-const sections=document.querySelectorAll('main section');
-tabs.forEach(btn=>{ btn.addEventListener('click',()=>{
-  tabs.forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  sections.forEach(s=>s.classList.remove('active'));
-  document.getElementById(btn.dataset.tab).classList.add('active');
-});});
-
-/* ===== 応募フォーム ===== */
-const WEBHOOK_URL="https://discord.com/api/webhooks/1463170933832548400/7tBndOn1yrnxiyuwuNnIJkREab_0LJc9l9mHB5BS2EKqSXxoFHaoh1A2Z4QvmQDEL5hZ";
-function openForm(){ document.getElementById('modal').classList.add('active'); }
-function closeForm(){ document.getElementById('modal').classList.remove('active'); }
-function sendForm(){
-  const role=document.getElementById('role').value;
-  const experience=document.getElementById('experience').value||"未記入";
-  const works=document.getElementById('works').value||"未記入";
-  const detail=document.getElementById('detail').value||"未記入";
-  const contact=document.getElementById('contact').value||"未記入";
-  const payload={username:"応募フォーム", embeds:[{title:"新しい応募", color:5793266, fields:[
-    {name:"職種", value:role},
-    {name:"経験", value:experience},
-    {name:"実績（URL）", value:works},
-    {name:"補足", value:detail},
-    {name:"連絡先", value:contact}
-  ], timestamp:new Date().toISOString()}]};
-  fetch(WEBHOOK_URL,{method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(payload)})
-  .then(()=>{ alert("応募を送信しました"); closeForm(); })
-  .catch(()=>alert("送信に失敗しました"));
-}
+const tabs=document.querySelectorAll('.tab');
+const sections=document.querySelectorAll('section');
+tabs.forEach(t=>{
+  t.onclick=()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    sections.forEach(s=>s.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.id).classList.add('active');
+  }
+});
 </script>
 
 </body>
